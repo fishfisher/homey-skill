@@ -1,6 +1,6 @@
 # Homey Skill 🏠
 
-A Clawdbot skill for controlling Athom Homey Pro smart home using the `homeyctl` CLI.
+An LLM assistant skill for controlling Athom Homey Pro smart home using the `homeyctl` CLI.
 
 ## Features
 
@@ -20,14 +20,19 @@ brew tap langtind/tap
 brew install homeyctl
 ```
 
-### 2. Install skill
+### 2. Configure homeyctl
+
+#### Interactive login (recommended for manual setup)
 
 ```bash
-cd ~/clawd/skills
-git clone https://github.com/fishfisher/homey-skill.git homey
+homeyctl login
 ```
 
-### 3. Configure homeyctl
+This will open a browser for authentication with Homey.
+
+#### Token-based authentication (recommended for LLM assistants and non-interactive mode)
+
+For automated setups or LLM assistants where browser interaction isn't available, use token-based authentication:
 
 Get token from [my.homey.app](https://my.homey.app/) → Settings → API Keys
 
@@ -54,7 +59,6 @@ Once installed, the skill enables natural language control of your Homey:
 
 - [homeyctl GitHub](https://github.com/langtind/homeyctl)
 - [Homey Developer Docs](https://homey.app/developer/)
-- [Clawdbot Documentation](https://github.com/cased/clawdbot)
 
 ## License
 
